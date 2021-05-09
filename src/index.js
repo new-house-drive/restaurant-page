@@ -1,14 +1,10 @@
 'use strict'
-const Restaurant = () => {
-
-    
+const Restaurant = (() => {
 
     const addTitle = () => {
-        let contentElements = document.querySelector('.content')
+        let content = document.querySelector('.content')
         let title = document.createElement('div')
-        title.className = 'title-element'
-
-        contentElements.appendChild(title)
+        title.classList.add('title-element')
 
     }
 
@@ -16,9 +12,8 @@ const Restaurant = () => {
     return {
         addTitle
     }
-}
+})()
 
 const Module = (() => {
-    console.log('xxx')
     Restaurant.addTitle()
 })()
