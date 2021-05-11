@@ -1,10 +1,14 @@
 'use strict'
 const Restaurant = (() => {
-
-    const addTitle = () => {
-        let content = document.querySelector('.content')
+    let content = document.getElementById('content')
+    
+    const addTitle = () => {    
         let title = document.createElement('div')
         title.classList.add('title-element')
+        title.innerText = 'popa'
+
+        
+        content.appendChild(title)
 
     }
 
