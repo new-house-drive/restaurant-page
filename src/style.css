@@ -1,0 +1,13 @@
+#content {
+  color: brown;
+}
+
+.navbar-view {
+  background-color: rgb(224, 224, 224);
+  min-height: 3em;
+  padding: 1em 30%;
+
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(3, auto);
+}
