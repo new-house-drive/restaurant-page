@@ -101,3 +101,6 @@ typings/
 
 # TernJS port file
 .tern-port
+
+# exclude build files
+main.js
