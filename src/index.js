@@ -3,26 +3,48 @@ import "./style.css";
 
 const Restaurant = (() => {
   let content = document.getElementById("content");
+  let buttonNames = ["About us", "Menu", "Contact us"];
+  let viewsList = ["about-us", "menu", "contact-us"];
+  
+  
+  /* NAVIGATION BAR */
 
-  const addNavbar = () => {
-    let navbarView = document.createElement("div");
-
-    navbarView.classList.add("navbar-view");
-
-    let navbarBtnNames = ["About us", "Menu", "Contact us"];
-    let navbarBtnIDs = ["about-us", "menu", "contact-us"];
-
+  const addNavbarButtons = (navbar) => {
+    
     for (let i = 0; i < 3; i++) {
       let navbarButton = document.createElement("button");
 
       navbarButton.classList.add("navbar-button");
-      navbarButton.innerText = navbarBtnNames[i];
-      navbarButton.id = navbarBtnIDs[i];
+      navbarButton.innerText = buttonNames[i];
+      navbarButton.id = viewsList[i] +  '-button';
 
-      navbarView.appendChild(navbarButton);
+      navbar.appendChild(navbarButton);
     }
-    content.appendChild(navbarView);
+  }
+
+  const navbarButtonEventListener = (button) => {
+      
+  }
+
+  const addNavbar = () => {
+    let navbar = document.createElement("div");
+    navbar.classList.add("navbar-view");
+
+    addNavbarButtons(navbar)
+    content.appendChild(navbar);
   };
+
+
+
+  // VIEWS CONSTRUCTION
+
+  const addViews = () => {
+    for (let i = 0; i < 3; i++) {
+      let view = document.createElement("div")
+      view.id = viewsList[i] + '-view';
+      content.appendChild(view)
+    }
+  }
 
   return {
     addNavbar,
@@ -31,4 +53,5 @@ const Restaurant = (() => {
 
 const Module = (() => {
   Restaurant.addNavbar();
+  Restaurant.addViews();
 })();
