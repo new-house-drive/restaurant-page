@@ -16,7 +16,7 @@
   \*************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);\n// Imports\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"#content {\\r\\n  color: brown;\\r\\n}\\r\\n\\r\\n.navbar-view {\\r\\n  background-color: rgb(224, 224, 224);\\r\\n  min-height: 3em;\\r\\n  padding: 1em 30%;\\r\\n\\r\\n  display: grid;\\r\\n  position: relative;\\r\\n  grid-template-columns: repeat(3, auto);\\r\\n}\\r\\n\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://restaurant-page/./src/style.css?./node_modules/css-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);\n// Imports\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"/**\\n  SUMMARY\\n\\n  #content\\n\\n  .navbar-view\\n\\n  #about-us-button\\n  #menu-button\\n  #contact-us-button\\n\\n  #about-us-view\\n  #menu-view\\n  #contact-us-view\\n\\n\\n*/\\n\\n\\n#content {\\n  color: brown;\\n}\\n\\n.navbar-view {\\n  background-color: rgb(224, 224, 224);\\n  min-height: 3em;\\n  padding: 1em 30%;\\n\\n  display: grid;\\n  position: relative;\\n  grid-template-columns: repeat(3, auto);\\n}\\n\\n\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://restaurant-page/./src/style.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -106,7 +106,17 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, style) {\
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\r\n\r\n\r\nconst Restaurant = (() => {\r\n  let content = document.getElementById(\"content\");\r\n\r\n  const addNavbar = () => {\r\n    let navbarView = document.createElement(\"div\");\r\n\r\n    navbarView.classList.add(\"navbar-view\");\r\n\r\n    let navbarBtnNames = [\"About us\", \"Menu\", \"Contact us\"];\r\n    let navbarBtnIDs = [\"about-us\", \"menu\", \"contact-us\"];\r\n\r\n    for (let i = 0; i < 3; i++) {\r\n      let navbarButton = document.createElement(\"button\");\r\n\r\n      navbarButton.classList.add(\"navbar-button\");\r\n      navbarButton.innerText = navbarBtnNames[i];\r\n      navbarButton.id = navbarBtnIDs[i];\r\n\r\n      navbarView.appendChild(navbarButton);\r\n    }\r\n    content.appendChild(navbarView);\r\n  };\r\n\r\n  return {\r\n    addNavbar,\r\n  };\r\n})();\r\n\r\nconst Module = (() => {\r\n  Restaurant.addNavbar();\r\n})();\r\n\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _img_cover_jpeg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./img/cover.jpeg */ \"./src/img/cover.jpeg\");\n\n\n\n\nconst Restaurant = (() => {\n  let content = document.getElementById(\"content\");\n  let buttonNames = [\"About us\", \"Menu\", \"Contact us\"];\n  let viewsList = [\"about-us\", \"menu\", \"contact-us\"];\n  \n  \n  /* NAVIGATION BAR */\n\n  const addNavbarButtons = (navbar) => {\n    \n    for (let i = 0; i < 3; i++) {\n      let navbarButton = document.createElement(\"button\");\n\n      navbarButton.classList.add(\"navbar-button\");\n      navbarButton.innerText = buttonNames[i];\n      navbarButton.id = viewsList[i] +  '-button';\n\n      navbar.appendChild(navbarButton);\n    }\n  }\n\n  const navbarButtonEventListener = (button) => {\n      \n  }\n\n  const addNavbar = () => {\n    let navbar = document.createElement(\"div\");\n    navbar.classList.add(\"navbar-view\");\n\n    addNavbarButtons(navbar)\n    content.appendChild(navbar);\n  };\n\n\n\n  // VIEWS CONSTRUCTION\n\n  const addViews = () => {\n    let viewsWrapping = document.createElement(\"div\")\n    viewsWrapping.classList.add('views-wrapping')\n\n    content.appendChild(viewsWrapping)\n    for (let i = 0; i < 3; i++) {\n      let view = document.createElement(\"div\")\n      view.id = viewsList[i] + '-view';\n      viewsWrapping.appendChild(view)\n    }\n\n    generateAboutUs()\n  }\n\n  const generateAboutUs = () => {\n    let aboutUsView = document.getElementById('about-us-view');\n\n    let cover = document.createElement('img');\n    cover.src = _img_cover_jpeg__WEBPACK_IMPORTED_MODULE_1__;\n    cover.alt = 'Holodomor cover'\n\n    let text = 'This site was intended to show the food of Ukrainian people during the Holodomor famine. '+\n    'However, once I start the research I found out that such site already exists and it was made by far more '+\n    'experienced develeopers than I am at the moment. Therefore, I strongly recommend visiting and checking out '+\n    'their website <a href=\"uncounted.ual.ua\"> Uncounted</a>. Still, you can see some of the dishes under the Menu section'\n\n    let textElement = document.createElement('p');\n    textElement.innerHTML = text\n\n    aboutUsView.appendChild(cover);\n    aboutUsView.appendChild(textElement);\n\n\n\n  }\n\n  return {\n    addNavbar,\n    addViews,\n  };\n})();\n\nconst Module = (() => {\n  Restaurant.addNavbar();\n  Restaurant.addViews();\n})();\n\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/img/cover.jpeg":
+/*!****************************!*\
+  !*** ./src/img/cover.jpeg ***!
+  \****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"beb832ed05b69b9350e3.jpeg\";\n\n//# sourceURL=webpack://restaurant-page/./src/img/cover.jpeg?");
 
 /***/ })
 
@@ -161,6 +171,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -175,6 +197,26 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /************************************************************************/
