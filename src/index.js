@@ -63,7 +63,7 @@ const Restaurant = (() => {
     let text = 'This site was intended to show the food of Ukrainian people during the Holodomor famine. '+
     'However, once I start the research I found out that such site already exists and it was made by far more '+
     'experienced develeopers than I am at the moment. Therefore, I strongly recommend visiting and checking out '+
-    'their website <a href="uncounted.ual.ua"> Uncounted</a>. Still, you can see some of the dishes under the Menu section'
+    'their website <a href="uncounted.ual.ua"> Uncounted</a>. Still, you can see some of the dishes under the Menu section.'
 
     let textElement = document.createElement('p');
     textElement.innerHTML = text
