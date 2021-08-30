@@ -103,4 +103,4 @@ typings/
 .tern-port
 
 # exclude build files
-main.js
+dist/main.js
