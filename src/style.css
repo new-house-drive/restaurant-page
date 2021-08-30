@@ -1,3 +1,22 @@
+/**
+  SUMMARY
+
+  #content
+
+  .navbar-view
+
+  #about-us-button
+  #menu-button
+  #contact-us-button
+
+  #about-us-view
+  #menu-view
+  #contact-us-view
+
+
+*/
+
+
 #content {
   color: brown;
 }
@@ -11,3 +30,4 @@
   position: relative;
   grid-template-columns: repeat(3, auto);
 }
+
