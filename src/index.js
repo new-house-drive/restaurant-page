@@ -3,6 +3,7 @@ import "./style.css";
 import menuList from './img/menu/menu';
 
 import coverImage from "./img/cover.jpeg"
+import contactUsCover from './img/contact-us.jpg'
 
 
 const Restaurant = (() => {
@@ -55,6 +56,7 @@ const Restaurant = (() => {
 
     generateAboutUs();
     generateMenu();
+    generateContactUs();
   }
 
   const generateAboutUs = () => {
@@ -107,6 +109,28 @@ const Restaurant = (() => {
 
       menuView.appendChild(menuItem);
     }
+  }
+
+  const generateContactUs = () => {
+    let contactUsView = document.getElementById('contact-us-view');
+
+    let cover = document.createElement('img')
+    cover.src = contactUsCover;
+    cover.alt = 'contact us'
+
+    let text = document.createElement('p')
+    text.innerHTML = 'Thank you for visiting my website. If you wish to learn more about Holodomor tragedy I will gladly refer you to the following' 
+    + ' <a href="https://youtu.be/mZoUioqlZEs">video</a> from TimeGhost History channel. It has Age Restriction and cannot be played on my website.'
+
+    let links = document.createElement('p')
+    links.innerHTML = "You are also welcome to check the website of Kyiv\'s <a href='https://holodomormuseum.org.ua/en/'>museum of Holodomor</a> for more information." + 
+    " Please also consider supporting their croudfunding project <a href='https://www.zernapravdy.org/en/'>Grains of Truth</a>."
+    
+    contactUsView.appendChild(cover);
+    contactUsView.appendChild(text);
+    contactUsView.appendChild(links);
+
+
   }
 
   return {
