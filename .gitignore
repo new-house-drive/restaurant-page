@@ -104,4 +104,4 @@ typings/
 
 # exclude build files
 dist
-!dist/main.js
+
