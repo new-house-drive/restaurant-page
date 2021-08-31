@@ -31,3 +31,6 @@
   grid-template-columns: repeat(3, auto);
 }
 
+#about-us-view {
+  display: none;
+}

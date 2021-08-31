@@ -1,6 +1,9 @@
 "use strict";
 import "./style.css";
+import menuList from './img/menu/menu';
+
 import coverImage from "./img/cover.jpeg"
+
 
 const Restaurant = (() => {
   let content = document.getElementById("content");
@@ -17,14 +20,14 @@ const Restaurant = (() => {
 
       navbarButton.classList.add("navbar-button");
       navbarButton.innerText = buttonNames[i];
-      navbarButton.id = viewsList[i] +  '-button';
+      navbarButton.id = viewsList[i];
 
       navbar.appendChild(navbarButton);
     }
   }
 
   const navbarButtonEventListener = (button) => {
-      
+      let viewToDisplay = button.id + '-view';
   }
 
   const addNavbar = () => {
@@ -50,7 +53,8 @@ const Restaurant = (() => {
       viewsWrapping.appendChild(view)
     }
 
-    generateAboutUs()
+    generateAboutUs();
+    generateMenu();
   }
 
   const generateAboutUs = () => {
@@ -71,8 +75,38 @@ const Restaurant = (() => {
     aboutUsView.appendChild(cover);
     aboutUsView.appendChild(textElement);
 
+  }
 
+  const generateMenu = () => {
+    let menuView = document.getElementById('menu-view');
+    
 
+    for (let item of menuList()) {
+      let menuItem = document.createElement('div');
+      menuItem.classList.add('menu-item');
+
+      let pic = document.createElement('img');
+      pic.src = item.pic;
+      pic.alt = item.title;
+
+      let title = document.createElement('p');
+      title.innerText = item.title;
+
+      let text = document.createElement('div');
+      text.classList.add('menu-item-text');
+      text.innerText = item.text;
+
+      let price = document.createElement('div');
+      price.classList.add('menu-item-price');
+      price.innerText = item.price;
+
+      menuItem.appendChild(pic);
+      menuItem.appendChild(title);
+      menuItem.appendChild(text);
+      menuItem.appendChild(price);
+
+      menuView.appendChild(menuItem);
+    }
   }
 
   return {
