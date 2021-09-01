@@ -19,16 +19,23 @@
 
 #content {
   color: brown;
+  background-image: url('./img/background-view.jpg');
 }
 
 .navbar-view {
-  background-color: rgb(224, 224, 224);
+  background-color: rgba(139, 136, 136, 0.151);
   min-height: 3em;
   padding: 1em 30%;
 
   display: grid;
   position: relative;
   grid-template-columns: repeat(3, auto);
+}
+
+.navbar-button {
+  background-color: rgba(204, 203, 203, 0.151);
+  border: black 3px solid;
+  color: aliceblue;
 }
 
 #about-us-view {
@@ -39,3 +46,15 @@
   display: none;
 }
 
+.views-wrapping {
+  
+  background-color: rgba(143, 141, 141, 0.055);
+  padding-left: 30%;
+  max-width: 40%;
+}
+
+.content-view {
+  background-color: rgba(255, 255, 255, 0.842);
+  padding: 1em;
+  color: black;
+}
