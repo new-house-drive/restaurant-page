@@ -113,8 +113,12 @@ const Restaurant = (() => {
       pic.src = item.pic;
       pic.alt = item.title;
 
-      let title = document.createElement("p");
-      title.innerText = item.title;
+      let title = document.createElement("div");
+      title.classList.add('menu-item-title')
+      
+      let titlePar = document.createElement('span');
+      titlePar.innerText = item.title;
+      title.appendChild(titlePar);
 
       let text = document.createElement("div");
       text.classList.add("menu-item-text");
