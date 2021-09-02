@@ -16,7 +16,7 @@ const Restaurant = (() => {
     for (let i = 0; i < 3; i++) {
       let navbarButton = document.createElement("button");
 
-      navbarButton.classList.add("navbar-button");
+      navbarButton.className = "navbar-button";
       navbarButton.innerText = buttonNames[i];
       navbarButton.id = viewsList[i];
 
@@ -30,11 +30,10 @@ const Restaurant = (() => {
 
   const navbarButtonEventListener = (id) => {
 
-    
+
+    // Change view Appearance
     let views = Array.from(document.querySelectorAll(".content-view"));
-
     let viewToDisplay = id + "-view";
-
     
     for (let view of views) {
       if (view.id != viewToDisplay) {
@@ -81,6 +80,8 @@ const Restaurant = (() => {
   const generateAboutUs = () => {
     let aboutUsView = document.getElementById("about-us-view");
 
+    let coverWrapping = document.createElement("div");
+    coverWrapping.id = 'cover-wrapping'
     let cover = document.createElement("img");
     cover.src = coverImage;
     cover.alt = "Holodomor cover";
@@ -89,12 +90,15 @@ const Restaurant = (() => {
       "This site was intended to show the food of Ukrainian people during the Holodomor famine. " +
       "However, once I start the research I found out that such site already exists and it was made by far more " +
       "experienced develeopers than I am at the moment. Therefore, I strongly recommend visiting and checking out " +
-      'their website <a href="uncounted.ual.ua"> Uncounted</a>. Still, you can see some of the dishes under the Menu section.';
+      'their website <a href="https://en.uncounted.ual.ua/"> Uncounted</a>. Still, you can see some of the dishes under the Menu section.';
 
     let textElement = document.createElement("p");
     textElement.innerHTML = text;
+    textElement.id = 'about-us-text';
 
-    aboutUsView.appendChild(cover);
+    coverWrapping.appendChild(cover);
+
+    aboutUsView.appendChild(coverWrapping);
     aboutUsView.appendChild(textElement);
   };
 
@@ -133,6 +137,7 @@ const Restaurant = (() => {
     let contactUsView = document.getElementById("contact-us-view");
 
     let cover = document.createElement("img");
+    cover.id = 'contact-us-cover'
     cover.src = contactUsCover;
     cover.alt = "contact us";
 

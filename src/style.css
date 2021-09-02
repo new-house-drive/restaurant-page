@@ -20,30 +20,45 @@
 #content {
   color: brown;
   background-image: url('./img/background-view.jpg');
+  min-height: 80em;
 }
 
 .navbar-view {
-  background-color: rgba(139, 136, 136, 0.151);
+  background-image: linear-gradient(45deg,rgba(12, 12, 12, 0.418), rgba(243, 243, 243, 0.055));
   min-height: 3em;
   padding: 1em 30%;
 
   display: grid;
   position: relative;
   grid-template-columns: repeat(3, auto);
+  column-gap: 1em;
 }
 
 .navbar-button {
-  background-color: rgba(204, 203, 203, 0.151);
+  background-color: rgba(78, 78, 78, 0.151);
   border: black 3px solid;
   color: aliceblue;
+  font-size: 1.2em;
+  border-radius: 2em;
 }
 
-#about-us-view {
-  display: none;
+
+.navbar-button:hover {
+  background-image: url('./img/button-hover.jpg');
+  color: rgb(0, 0, 0);
+  border: none;
+  font-weight: 900;
 }
 
-#menu-view {
-  display: none;
+.navbar-button:active {
+  border: white 2px solid;
+}
+
+
+
+.menu-item img{
+  max-width: 600px;
+  max-height: 600px;
 }
 
 .views-wrapping {
@@ -54,7 +69,65 @@
 }
 
 .content-view {
-  background-color: rgba(255, 255, 255, 0.842);
-  padding: 1em;
+  
   color: black;
+  text-align: center;
+
+  border-radius: 2em;
+}
+
+
+/* ABOUT US VIEW S*/
+
+#about-us-view {
+  background-color: black;
+  overflow: hidden;
+  position: relative;
+}
+
+#about-us-text {
+  font-size: 2em;
+  padding: 0em 1em;
+
+  color: rgb(245, 245, 245);
+  background-color: black;
+}
+
+#about-us-text a {
+  text-decoration: none;
+  background-color: rgb(179, 178, 176);
+  color: black;
+  padding: 0.1em;
+}
+
+#about-us-text a:hover {
+  text-decoration: dashed underline overline;
+}
+
+#cover-wrapping {
+  background-color: black;
+  padding: 2em;
+  padding-bottom: 0%;
+  border-radius: 2em;
+  overflow: hidden;
+}
+
+#cover-wrapping img {
+  width: 100%;
+  border-radius: 2em;
+}
+
+
+/* MENU VIEW */
+#menu-view {
+  background-image: linear-gradient(45deg,rgba(12, 12, 12, 0.418), rgba(243, 243, 243, 0.055));
+  display: none;
+}
+
+/* CONTACT US VIEW */
+
+#contact-us-view {
+  display: none;
+  background-color: black;
+  color: rgb(255, 255, 255);
 }
