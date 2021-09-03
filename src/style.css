@@ -120,6 +120,7 @@
 #menu-view {
   background-image: linear-gradient(45deg,rgba(12, 12, 12, 0.925), rgba(0, 0, 0, 0.555));
   display: none;
+  padding-bottom: 5em;
 }
 
 .menu-item {
@@ -134,13 +135,13 @@
 }
 
 .menu-item-title {
-  margin-top: -5em;
+  margin-top: -10em;
 }
 
 .menu-item-title span {
 
   padding: 0.2em;
-  font-size: 3em;
+  font-size: 2.5em;
 
   font-weight: 800;
   background-color: white;
@@ -148,6 +149,22 @@
   border-radius: 2em;
 }
 
+.menu-item-text {
+  padding: 0em 4em;
+  margin-top: 4em;
+}
+
+.menu-item-text span{
+  color: white;
+  padding: 3em 1em;
+  border-radius: 2em;
+}
+
+.menu-item-price span {
+  color: rgb(207, 255, 161);
+  font-size: 1.5em;
+  padding: 0.2em 3em;
+}
 
 
 /* CONTACT US VIEW */
@@ -156,4 +173,25 @@
   display: none;
   background-color: black;
   color: rgb(255, 255, 255);
+  padding: 2em;
+  line-height: 1.3em;
+}
+
+#contact-us-view a {
+  text-decoration: none;
+  background-color: rgb(179, 178, 176);
+  color: black;
+  padding: 0.1em;
+}
+
+.contact-us-cover-wrapping {
+  background-color: black;
+  padding-bottom: 0%;
+  border-radius: 2em;
+  overflow: hidden;
+}
+
+.contact-us-cover-wrapping img {
+  width: 100%;
+  border-radius: 2em;
 }

@@ -51,7 +51,7 @@ let menuList = [
   },
 
   {
-    title: "Herbal Bread (Travyaniki)",
+    title: "Herbal Bread",
     text: "baked flatbread made of grated grass, kneaded in hot water with the addition of flax seeds",
     price: "0.79$",
     pic: travyanykyPic,

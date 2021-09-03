@@ -90,7 +90,7 @@ const Restaurant = (() => {
       "This site was intended to show the food of Ukrainian people during the Holodomor famine. " +
       "However, once I start the research I found out that such site already exists and it was made by far more " +
       "experienced develeopers than I am at the moment. Therefore, I strongly recommend visiting and checking out " +
-      'their website <a href="https://en.uncounted.ual.ua/"> Uncounted</a>. Still, you can see some of the dishes under the Menu section.';
+      'their website <a href="https://en.uncounted.ual.ua/">Uncounted</a>. Still, you can see some of the dishes under the Menu section.';
 
     let textElement = document.createElement("p");
     textElement.innerHTML = text;
@@ -122,11 +122,16 @@ const Restaurant = (() => {
 
       let text = document.createElement("div");
       text.classList.add("menu-item-text");
-      text.innerText = item.text;
+      let textPar = document.createElement("span")
+      textPar.innerText = item.text;
+      text.appendChild(textPar);
 
       let price = document.createElement("div");
       price.classList.add("menu-item-price");
-      price.innerText = item.price;
+
+      let pricePar = document.createElement("span")
+      pricePar.innerText = item.price;
+      price.appendChild(pricePar);
 
       menuItem.appendChild(pic);
       menuItem.appendChild(title);
@@ -140,10 +145,13 @@ const Restaurant = (() => {
   const generateContactUs = () => {
     let contactUsView = document.getElementById("contact-us-view");
 
+    let coverWrapping = document.createElement('div')
+    coverWrapping.className = 'contact-us-cover-wrapping';
     let cover = document.createElement("img");
     cover.id = 'contact-us-cover'
     cover.src = contactUsCover;
     cover.alt = "contact us";
+    coverWrapping.appendChild(cover);
 
     let text = document.createElement("p");
     text.innerHTML =
@@ -155,7 +163,7 @@ const Restaurant = (() => {
       "You are also welcome to check the website of Kyiv's <a href='https://holodomormuseum.org.ua/en/'>museum of Holodomor</a> for more information." +
       " Please also consider supporting their croudfunding project <a href='https://www.zernapravdy.org/en/'>Grains of Truth</a>.";
 
-    contactUsView.appendChild(cover);
+    contactUsView.appendChild(coverWrapping);
     contactUsView.appendChild(text);
     contactUsView.appendChild(links);
   };
